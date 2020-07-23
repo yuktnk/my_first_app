@@ -1,0 +1,35 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title MyFirstApp
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application'
+  %body
+    %header
+      .Header
+        .Header__wrap
+          .Header__wrap--logo
+            %h1 [ かめこみゅ（仮） ]
+          %nav.Header__wrap--menu
+            %ul.leftNav
+              %li 
+                = link_to '#' do
+                  = icon('fas', 'upload')
+                  投稿する
+              %li [　　検索フォーム　　]
+            %ul.RightNav
+              %li
+                = link_to '#' do
+                  = icon('fas', 'sign-in-alt')
+                  ログイン
+              %li
+                = link_to '#' do
+                  = icon('fas', 'user-plus')
+                  会員登録
+    = yield
+    %footer
+      .Footer
+        ↓　ここはフッターです　↓
