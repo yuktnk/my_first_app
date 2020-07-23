@@ -1,0 +1,36 @@
+.Pickup
+  -# .Pickup__main--bg
+  -# = image_tag src="https://img1.kakaku.k-img.com/images/maga/13834/img002.jpg"
+  .Pickup__main
+    .MainImage
+      = link_to '#' do
+        = image_tag src="photo2.jpg", size: "480x360"
+    .MainData
+      .MainData--title
+        Title: エレモフィラ・ニベア
+      .MainData--userName
+        Photo: たなか
+      <br>
+      .MainData--details
+        %p Camera: α7Ⅲ
+        %p Lens: sel55f18z
+        %p Exif:
+        F:1.8　　SS:1/60　　ISO:100
+      <br>
+      .MainData--comment
+        %p Comment: 
+        埼玉県さいたま市さいたま新都心駅付近にて撮影。<br>
+        品種名のニベアには、雪のように白いという意味があります。 また「ホワイトツリー」という別名もあり、葉も茎も綺麗なシルバーカラーです。 
+  .Pickup__sub
+    %h1 -  Pickup Photos of the week -
+    %ul.Pickup__imageList
+      %li.Pickup__image
+        = image_tag src="photo2.jpg", size: "200x160", alt: ""
+      %li.Pickup__image
+        = image_tag src="photo1.jpg", size: "200x160", alt: ""
+      %li.Pickup__image
+        = image_tag src="photo4.jpg", size: "200x160", alt: ""
+      %li.Pickup__image
+        = image_tag src="photo6.jpg", size: "200x160", alt: ""
+      %li.Pickup__image
+        = image_tag src="photo5.jpg", size: "200x160", alt: ""
