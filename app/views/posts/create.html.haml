@@ -1,0 +1,15 @@
+-# .contents
+-#   .success
+-#     %h3 投稿が完了しました。
+-#     = link_to root_path do
+-#       投稿一覧へ戻る
+
+
+.FormContainer
+  .Form
+    .Exif
+    %h1 投稿が完了しました。
+    .BackBtn
+      = link_to root_path, class: 'LinkBlue' do
+        = icon('fas', 'arrow-left')
+        投稿一覧へ戻る

@@ -1,0 +1,90 @@
+.Container
+  .Contents
+    .TitleArea
+      .photoTitle 
+        = @post.title
+      .photoBy
+        Photo：
+        = image_tag @post.user.image.url, class: 'PersonMini'
+        = link_to "/users/#{@post.user.id}", class: 'LinkOrange' do
+          = @post.user.name 
+        さん
+    .ImageArea
+      = image_tag @post.image.url, class: "Photo"
+      .LikeAndEdit
+        .LikeArea
+          = render "like"
+        .EditArea
+          - if user_signed_in? && current_user.id == @post.user.id
+            = link_to edit_post_path, method: :get, class: 'EditBtn' do
+              編集
+            = link_to post_path, method: :delete, class: 'EditBtn' do
+              削除
+    .InfoArea
+      .Info
+        撮影情報
+      .Detail
+        .Exif
+          絞り値：
+          = @post.F 
+          シャッター速度：
+          = @post.SS
+          ISO感度：
+          = @post.ISO
+        .Comment
+        = @post.comment
+
+
+
+
+
+  .Communication
+    .LeftContent
+      .LeftTitle
+        %h1 コメント一覧
+        %ul
+          %li
+          - if @comments
+            - @comments.each do |comment|
+              .Comment
+                .UserPhoto
+                  = image_tag comment.user.image.url, class: 'person'
+                .CommentZone
+                  .NameAndDaytime
+                    .UserName
+                      = link_to "/users/#{comment.user.id}", class: 'LinkOrange' do
+                        = comment.user.name
+                    .CreatedAt
+                      = comment.created_at.strftime("%Y年%m月%d日 %H時%M分")
+                  .CommentAndDelete
+                    .TemplateComment
+                      = comment.text
+                    .CommentDelete
+                      - if user_signed_in? && current_user.id == comment.user.id
+                        = link_to "/posts/:post_id/comments/#{comment.id}", method: :delete, class: 'LinkOrange' do
+                          削除
+          - else
+            %strong まだコメントはありません。
+      - if user_signed_in?
+        .CommentForm
+          = form_with model: [@post, @comment], id: "new_comment", local: true do |f|
+            = f.text_area :text, placeholder: "コメントを入力してください。（誹謗中傷、個人情報の入力、営業活動、政治的活動、宗教的活動などは削除対象です）", rows: 8, class: "textbox"
+            = f.submit '投稿する', class: "form__submit"
+          =# %strong ※ コメントの投稿には新規登録/ログインが必要です ※
+
+
+
+    .RightContent
+      .RightTitle
+        %h1 撮影者情報
+        .UserInfomation
+          .PhotoAndName
+            .UserPhoto
+              = image_tag @post.user.image.url, class: 'person'
+            .UserName
+              = link_to "/users/#{@post.user.id}", class: 'LinkOrange' do
+                = @post.user.name
+          .Profile
+            = @post.user.profile
+          .ToGallery
+            

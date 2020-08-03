@@ -1,0 +1,223 @@
+.Container {
+  width: 100vw;
+  .Contents {
+    width: 1080px;
+    // background-color: lightgrey;
+    // background-image: url("photo2.jpg");
+    margin: auto;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .TitleArea {
+      height: 80px;
+      width: 800px;
+      // background-color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      // padding-bottom: 16px;
+      background-image: url(line1.png);
+      background-position: bottom;
+      background-repeat: no-repeat;
+      .photoTitle {
+        font-size: xx-large;
+        margin: 8px;
+        // background-color: white;
+      }
+      .photoBy {
+        margin: 8px;
+        // background-color: white;
+        .PersonMini {
+          width: 36px;
+        }
+      }
+    }
+    .ImageArea {
+      margin-top: 64px;
+      text-align: center;
+      .LikeAndEdit {
+        height: 24px;
+        width: 800px;
+        display: flex;
+        margin: 8px 0;
+        justify-content: space-between;
+      }
+      .Photo {
+        box-shadow: 0px 0px 16px black;
+      }
+      .EditArea {
+        display: flex;
+        .EditBtn {
+          width: 40px;
+          color: gray;
+          margin: 0 8px;
+          text-decoration: none;
+        }
+      }
+    }
+    .InfoArea {
+      height: 160px;
+      width: 800px;
+      // background-color: #eaeaea;
+      background-image: url(p0435_l.jpg);
+      display: flex;
+      justify-content: space-between;
+      .Info {
+        width: 96px;
+        text-align: center;
+        padding: 8px;
+      }
+      .Detail {
+        width: 704px;
+        padding: 8px;
+        .Exif {
+          // display: flex;
+          // justify-content: space-between;
+        }
+      }
+    }
+    .LikeArea {
+      width: 800px;
+      margin: 8px 0;
+      display: flex;
+      align-items: center;
+      justify-content: r;
+      .BtnAndCount {
+        display: flex;
+        align-items: center;
+        margin-right: 16px;
+        .UnLikeBtn {
+          font-size: 25px;
+          color: #808080; 
+          margin-right: 2px;
+          }
+        .LikeBtn {
+          font-size: 25px;
+          color: #e54747;
+          margin-right: 2px;
+          }
+        }
+      .LikeUser {
+        padding-left: 40px;
+      }
+    }
+  }
+
+
+
+
+  .Communication {
+    height: 1080px;
+    width: 1080px;
+    margin: auto;
+    // background-color: #eee;
+    background-image: url(p0435_l.jpg);
+    display: flex;
+    .LeftContent {
+      width: 680px;
+      overflow: scroll;
+      .LeftTitle {
+        margin: 24px;
+        h1 {
+          padding-bottom: 16px;
+          background-image: url(line1.png);
+          background-position: bottom;
+          background-repeat: no-repeat;
+        ul {
+          overflow: scroll;
+        }
+        }
+        .Comment {
+          width: 632px;
+          height: 160px;
+          background-color: white;
+          margin: 24px auto;
+          display: flex;
+          justify-content: space-between;
+          padding: 8px;
+          overflow: scroll;
+          .UserPhoto {
+            // height: 72px;
+            width: 72px;
+          }
+        }
+        .CommentZone {
+          width: 536px;
+          .NameAndDaytime {
+            display: flex;
+            justify-content: space-between;
+          }
+          .CommentAndDelete {
+            display: flex;
+            justify-content: space-between;          }
+        }
+      }
+      .CommentForm {
+        margin: 24px;
+        // background-color: lavender;
+        text-align: center;
+        .textbox {
+          width: 632px;
+          font-size: 95%;
+          line-height: 120%;
+          // color: #fff;
+          // background: #4e4e4e;
+          padding: 5px 10px;
+          border: none;
+          // border-radius: 20px;
+          outline: none;
+
+        }
+        .form__submit {
+          color: white;
+          margin-top: 8px;
+          padding: 4px 16px;
+          border: 1px #2e9dec solid;
+          background-color: #2e9dec;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+      }
+
+    }
+    .RightContent {
+      width: 400px;
+      // background-color: lavenderblush;
+      .RightTitle {
+        margin: 24px;
+        h1 {
+          padding-bottom: 16px;
+          background-image: url(line1.png);
+          background-position: bottom;
+          background-repeat: no-repeat;
+        }
+        .UserInfomation {
+          background-color: white;
+          padding: 8px;
+          margin-top: 24px;
+          .PhotoAndName {
+            display: flex;
+            justify-content: space-between;
+            .UserPhoto {
+              // height: 72px;
+              max-width: 72px;
+            }
+            .UserName {
+              width: 256px;
+            }
+          }
+          .Profile {
+            margin-top: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+.person {
+  // height: 72px;
+  width: 72px;
+}
+.CommentDelete {
+}
