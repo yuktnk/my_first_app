@@ -1,0 +1,67 @@
+// 投稿フォーム
+.FormContainer {
+  margin: 100px auto;
+  height: 720px;
+  width: 1080px;
+  background-image: url("postBGIblur.jpg");
+  background-size: contain;
+  position: relative;
+  .Form {
+    height: 540px;
+    width: 540px;
+    display: flex;
+    flex-direction: column;
+    border: 1px white solid;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px white;
+    padding: 16px;
+    position: absolute;
+    top: 90px;
+    left: 64px;
+    h1 {
+      color: #fff;
+      font-size: x-large;
+      margin-bottom: 24px;
+    }
+    .Exif {
+      width: auto;
+      display: flex;
+      justify-content: space-between;
+      .InputContent {
+        width: 30%;
+      }
+    }
+    h2 {
+      color:#fff;
+      margin-top: 20px;
+
+    }
+    .SubmitBtn {
+      color: white;
+      height: 40px;
+      width: 80px;
+      border: 1px #2e9dec solid;
+      background-color: #2e9dec;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+  }
+}
+.InputContent {
+  background-color: rgba(255,255,255,.5);
+  border: 1px #fff solid;
+  border-radius: 5px;
+  padding: 4px;
+  font-size: 1rem;
+}
+.InputComment {
+  height: 150px;
+}
+.InputImage {
+  color: white;
+}
+
+.PhotoEdit {
+  width: 80px;
+}

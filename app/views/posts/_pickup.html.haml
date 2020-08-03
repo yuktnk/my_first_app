@@ -1,36 +1,38 @@
 .Pickup
-  -# .Pickup__main--bg
-  -# = image_tag src="https://img1.kakaku.k-img.com/images/maga/13834/img002.jpg"
-  .Pickup__main
-    .MainImage
-      = link_to 'posts/detail' do
-        = image_tag src="photo2.jpg", size: "480x360"
-    .MainData
-      .MainData--title
-        Title: エレモフィラ・ニベア
-      .MainData--userName
-        Photo by: たなか
-      <br>
-      .MainData--details
-        %p Camera: α7Ⅲ
-        %p Lens: sel55f18z
-        %p Exif:
-        F:1.8　　SS:1/60　　ISO:100
-      <br>
-      .MainData--comment
-        %p Comment: 
-        埼玉県さいたま市さいたま新都心駅付近にて撮影。<br>
-        品種名のニベアには、雪のように白いという意味があります。 また「ホワイトツリー」という別名もあり、葉も茎も綺麗なシルバーカラーです。 
+  - @posts.first(1).each do |post|
+    .Pickup__main--bg
+      = image_tag post.image.url, size: "2000x480"
+    .Pickup__main
+      .MainImage
+        = link_to post_path(post.id) do
+          = image_tag post.image.url, size: "480x360"
+      .MainData
+        .MainData--title
+          Title
+          = post.title
+        .MainData--userName
+          Photo by: 
+          = post.user.name
+        <br>
+        .MainData--details
+          Exif:
+          F:
+          = post.F
+          SS:
+          = post.SS
+          ISO:
+          = post.ISO
+        <br>
+        .MainData--comment
+          Comment: 
+          = post.comment
+        .MainData--Like
+          いいね数：
+          = post.likes.count
   .Pickup__sub
-    %h1 -  Pickup Photos of the week -
+    %h1 - Pickup Photos -
     %ul.Pickup__imageList
-      %li.Pickup__image
-        = image_tag src="photo2.jpg", size: "200x160", alt: ""
-      %li.Pickup__image
-        = image_tag src="photo1.jpg", size: "200x160", alt: ""
-      %li.Pickup__image
-        = image_tag src="photo4.jpg", size: "200x160", alt: ""
-      %li.Pickup__image
-        = image_tag src="photo6.jpg", size: "200x160", alt: ""
-      %li.Pickup__image
-        = image_tag src="photo5.jpg", size: "200x160", alt: ""
+      - @posts.first(5).each do |post|
+        %li.Pickup__image
+          = link_to post_path(post.id) do
+            = image_tag post.image.url, size: "200x160", class: 'huwahuwa'

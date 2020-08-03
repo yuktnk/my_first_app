@@ -1,34 +1,23 @@
 .Gallery
-  .Gallery__title
-    %p - Photo Gallery -
+  .Gallery__title - Photo Gallery -
   %ul.Gallery__lists
-    %li.item 1
-    %li.item 2
-    %li.item 3
-    %li.item 4
-    %li.item.item--large 5
-    %li.item 6
-    %li.item 7
-    %li.item 8
-    %li.item.item--large 9
-    %li.item 10
-    %li.item 11
-    %li.item 12
-    %li.item 13
-    %li.item 14
-    %li.item 15
-    %li.item 16
-    %li.item.item--large 17
-    %li.item 18
-    %li.item 19
-    %li.item 20
-    %li.item 21
-    %li.item.item--large 22
-    %li.item 23
-    %li.item 24
-    %li.item 25
-    %li.item.item--large 26
-    %li.item 27
-    %li.item 28
-    %li.item 29
-    %li.item 30
+    - @posts.shuffle.each do |post|
+      %li.item
+        = image_tag post.image.url, class: 'GalleryPicture huwahuwa inner'
+        = link_to post_path(post.id) do
+          .caption
+            .captionTitle
+              Title：
+              = post.title
+            .captionBy
+              by：
+              = post.user.name 
+              さん
+            .captionLike
+              いいね数：
+              = post.likes.count
+            .captionComment
+              = post.comment
+-# .start
+-#   %p
+-#     = image_tag src="logo.png"

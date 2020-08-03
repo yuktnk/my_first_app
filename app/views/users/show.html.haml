@@ -1,0 +1,20 @@
+.Gallery
+  .Gallery__title - Gallery -
+  %ul.Gallery__lists
+    - @posts.shuffle.each do |post|
+      %li.item
+        = image_tag post.image.url, class: 'GalleryPicture huwahuwa'
+        = link_to post_path(post.id) do
+          .caption
+            .captionTitle
+              Title：
+              = post.title
+            .captionBy
+              by：
+              = post.user.name 
+              さん
+            .captionLike
+              いいね数：
+              = post.likes.count
+            .captionComment
+              = post.comment
