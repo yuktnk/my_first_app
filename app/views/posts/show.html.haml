@@ -5,7 +5,8 @@
         = @post.title
       .photoBy
         Photo：
-        = image_tag @post.user.image.url, class: 'PersonMini'
+        - if @post.user.image.url
+          = image_tag @post.user.image.url, class: 'PersonMini'
         = link_to "/users/#{@post.user.id}", class: 'LinkOrange' do
           = @post.user.name 
         さん
@@ -48,7 +49,8 @@
             - @comments.each do |comment|
               .Comment
                 .UserPhoto
-                  = image_tag comment.user.image.url, class: 'person'
+                  - if comment.user.image.url
+                    = image_tag comment.user.image.url, class: 'person'
                 .CommentZone
                   .NameAndDaytime
                     .UserName
@@ -80,7 +82,8 @@
         .UserInfomation
           .PhotoAndName
             .UserPhoto
-              = image_tag @post.user.image.url, class: 'person'
+              - if @post.user.image.url
+                = image_tag @post.user.image.url, class: 'person'
             .UserName
               = link_to "/users/#{@post.user.id}", class: 'LinkOrange' do
                 = @post.user.name
