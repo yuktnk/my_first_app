@@ -1,0 +1,38 @@
+.Footer {
+  .ToTop {
+    width: 100%;
+    // background-color: rgba(0,0,0,0.0);
+    background-image: url(p0435_l.jpg);
+    text-align: right;
+    .ToTop__Btn {
+      height: 32px;
+      // width: 32px;
+      display: inline-block;
+      background-color: #2e9dec;
+      padding: 4px 8px;
+      margin-right: 24px;
+      color: #fff;
+      cursor: pointer;
+    }
+    .BlueLine {
+      height: 4px;
+      background-color: #2e9dec;
+    }
+  }
+  .FooterLogo {
+    width: 100vw;
+    text-align: right;
+    background-color: #262626;
+    .MiniLogo {
+      display: inline-block;
+      margin: 24px;
+      cursor: pointer;
+    }
+  }
+  .Copyright {
+    color: #eee;
+    background-color: black;
+    font-size: xx-small;
+    padding: 8px;
+  }
+}
