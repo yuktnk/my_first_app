@@ -5,83 +5,9 @@
 .Wrapper {
 }
 
-.Header {
-  // height: 96px;
-  width: 100vw;
-  &__wrap{
-    // height: 100%;
-    width: 100vw;
-    &--logo {
-      // height: 60px;
-      width: 100%;
-    }
-    &--menu {
-      width: 100%;
-      color: white;
-      background-color: #262626;
-      .Navigation {
-        display: flex;
-        justify-content: space-between;
-        ul {
-          display: flex;
-          li {
-            display: block;
-            padding: 8px;
-          }
-          li.button:hover {
-            background-color: #2e9dec;
-          }
-          .search-input {
-            font-size: 95%;
-            line-height: 120%;
-            color: #fff;
-            background: #4e4e4e;
-            padding: 5px 10px;
-            border: none;
-            border-radius: 20px;
-            outline: none;
-            width: 250px;
-          }
-          .search-btn {
-            color: white;
-            padding: 0 16px;
-            border: 1px #2e9dec solid;
-            background-color: #2e9dec;
-            border-radius: 5px;
-            cursor: pointer;
-          }
-        }
-      }
-    }
-  }
-}
-.button {
-  display: inline-block;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: white;
-}
-.button::before,
-.button::after {
-  position: absolute;
-  z-index: -1;
-  display: block;
-  content: '';
-}
-.button,
-.button::before,
-.button::after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-transition: all .3s;
-  transition: all .3s;
-}
-.TextDecoNoneWhite {
-  color: white;
-  text-decoration: none;
-}
+
+
+
 
 .LinkOrange {
   color: #fd8008;
@@ -251,10 +177,7 @@ footer {
     padding: 8px;
   }
 }
-.BlueLine {
-  height: 4px;
-  background-color: #2e9dec;
-}
+
 
 
 
