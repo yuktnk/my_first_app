@@ -3,7 +3,7 @@
   .Contents {
     width: 1080px;
     // background-color: lightgrey;
-    // background-image: url("photo2.jpg");
+    // background: image-url("photo2.jpg");
     margin: auto;
     padding: 8px;
     display: flex;
@@ -17,7 +17,7 @@
       justify-content: space-between;
       align-items: center;
       // padding-bottom: 16px;
-      background-image: url(line1.png);
+      background: image-url(line1.png);
       background-position: bottom;
       background-repeat: no-repeat;
       .photoTitle {
@@ -60,7 +60,7 @@
       height: 160px;
       width: 800px;
       // background-color: #eaeaea;
-      background-image: url(p0435_l.jpg);
+      background: image-url(p0435_l.jpg);
       display: flex;
       justify-content: space-between;
       .Info {
@@ -112,7 +112,7 @@
     width: 1080px;
     margin: auto;
     // background-color: #eee;
-    background-image: url(p0435_l.jpg);
+    background: image-url(p0435_l.jpg);
     display: flex;
     .LeftContent {
       width: 680px;
@@ -121,7 +121,7 @@
         margin: 24px;
         h1 {
           padding-bottom: 16px;
-          background-image: url(line1.png);
+          background: image-url(line1.png);
           background-position: bottom;
           background-repeat: no-repeat;
         ul {
@@ -188,7 +188,7 @@
         margin: 24px;
         h1 {
           padding-bottom: 16px;
-          background-image: url(line1.png);
+          background: image-url(line1.png);
           background-position: bottom;
           background-repeat: no-repeat;
         }
