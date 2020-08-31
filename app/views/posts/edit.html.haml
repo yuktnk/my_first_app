@@ -1,3 +1,4 @@
+= render 'posts/header'
 = form_with model: @post, local: true do |f|
   .FormContainer
     .Form
@@ -19,7 +20,7 @@
       = f.text_area :comment, class: 'InputContent', required: true
       %h2
       = f.submit 'Send', class: 'SubmitBtn'
-
+= render 'posts/footer'
 
 
 

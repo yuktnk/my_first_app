@@ -1,3 +1,4 @@
+= render 'posts/header'
 .AccountPage
   .AccountPage__title
     %h2 Log in
@@ -18,3 +19,4 @@
             = f.password_field :password, autocomplete: "off"
         .actions
           = f.submit "Log in", class: 'Button UserButton'
+= render 'posts/footer'
