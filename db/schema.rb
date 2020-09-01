@@ -33,6 +33,9 @@ ActiveRecord::Schema.define(version: 2020_07_31_090033) do
     t.string "title"
     t.text "comment"
     t.string "image"
+    t.string "F"
+    t.string "SS"
+    t.string "ISO"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

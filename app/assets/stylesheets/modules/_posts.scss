@@ -27,17 +27,17 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  // background-image: url("photo2.jpg");
-  // background-size: cover;
   &__main--bg{
     margin-top: 8px;
-    // height: 800px;
-    // width: 100px;
     position: absolute;
     top: 0px;
     left: 0px;
     -ms-filter: blur(24px);
     filter: blur(8px);
+    .PickupBg {
+      height: 480px;
+      width: 100vw;
+    }
   }
   &__main{
     height: 480px;
@@ -109,12 +109,12 @@
 .Gallery {
   height: auto;
   width: 100vw;
-  // background-color: #eee;
   background-image: url(p0435_l.jpg);
   align-items: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 40px;
   &__title {
     width: 100%;
     text-align: center;
@@ -123,7 +123,6 @@
   }
   &__lists {
     width: 100%;
-    // background-color: #eee;
     background-image: url(p0435_l.jpg);
     padding: 8px;
     .item {
