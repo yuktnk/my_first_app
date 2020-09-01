@@ -36,8 +36,8 @@
         }
         .RightNav{
           display: flex;
-          .HeaderButton:hover {
-            background-color: #2e9dec;
+          .UserName {
+            padding: 8px;
           }
           .HeaderButton {
             text-align: center;
@@ -52,6 +52,9 @@
               text-decoration: none;
               padding: 8px;
             }
+          }
+          .HeaderButton:hover {
+            background-color: #2e9dec;
           }
           .HeaderButton::before,
           .HeaderButton::after {
