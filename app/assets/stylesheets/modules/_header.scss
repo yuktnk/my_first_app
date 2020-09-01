@@ -1,10 +1,6 @@
 .Header {
   width: 100vw;
   &__wrap{
-    // width: 100%;
-    &--logo {
-      // width: 100%;
-    }
     &--menu {
       width: 100%;
       color: white;
@@ -31,7 +27,7 @@
           }
           .SearchButton {
             color: white;
-            padding: 0 16px;
+            padding: 1px 16px;
             border: 1px #2e9dec solid;
             background-color: #2e9dec;
             border-radius: 5px;
@@ -40,19 +36,22 @@
         }
         .RightNav{
           display: flex;
-          li {
-            display: block;
-            padding: 8px;
-          }
           .HeaderButton:hover {
             background-color: #2e9dec;
           }
           .HeaderButton {
-            display: inline-block;
             text-align: center;
             text-decoration: none;
             outline: none;
             color: white;
+            .TextDecoNoneWhite {
+              display: block;
+              height: 100%;
+              width: 100%;
+              color: white;
+              text-decoration: none;
+              padding: 8px;
+            }
           }
           .HeaderButton::before,
           .HeaderButton::after {
@@ -70,13 +69,8 @@
             -webkit-transition: all .3s;
             transition: all .3s;
           }
-
         }
       }
     }
   }
-}
-.TextDecoNoneWhite {
-  color: white;
-  text-decoration: none;
 }
