@@ -1,7 +1,7 @@
 .Pickup
   - @posts.first(1).each do |post|
     .Pickup__main--bg
-      = image_tag post.image.url, size: "2000x480"
+      = image_tag post.image.url, class: 'PickupBg'
     .Pickup__main
       .MainImage
         = link_to post_path(post.id) do
