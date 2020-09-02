@@ -32,13 +32,14 @@ class PostsController < ApplicationController
 
 
   def destroy
-  post = Post.find(params[:id])
-  if post.destroy
-    redirect_to root_path
-    flash[:notice] = "商品を削除しました"
-  else
-    redirect_back(fallback_location: root_path)
-    flash[:alert] = "商品の削除に失敗しました"
+    post = Post.find(params[:id])
+    if post.destroy
+      redirect_to root_path
+      flash[:notice] = "商品を削除しました"
+    else
+      redirect_back(fallback_location: root_path)
+      flash[:alert] = "商品の削除に失敗しました"
+    end
   end
 
   def show
