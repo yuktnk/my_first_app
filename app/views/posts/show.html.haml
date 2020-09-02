@@ -56,6 +56,7 @@
                     .UserName
                       = link_to "/users/#{comment.user.id}", class: 'LinkOrange' do
                         = comment.user.name
+                      %span さん
                     .CreatedAt
                       = comment.created_at.strftime("%Y年%m月%d日 %H時%M分")
                   .CommentAndDelete
@@ -84,10 +85,17 @@
             .UserPhoto
               - if @post.user.image.url
                 = image_tag @post.user.image.url, class: 'person'
-            .UserName
-              = link_to "/users/#{@post.user.id}", class: 'LinkOrange' do
-                = @post.user.name
+            .NameAndLikes
+              .UserName
+                = link_to "/users/#{@post.user.id}", class: 'LinkOrange' do
+                  = @post.user.name
+                %span さん
+              .TotalLikes
+                %span 総いいね数 :
+                = @post.user.likes.count
           .Profile
+            %span プロフィール：
+            <br>
             = @post.user.profile
           .ToGallery
             

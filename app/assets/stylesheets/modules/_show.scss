@@ -57,12 +57,13 @@
       }
     }
     .InfoArea {
-      height: 160px;
+      min-height: 160px;
       width: 800px;
       // background-color: #eaeaea;
       background: image-url("p0435_l.jpg");
       display: flex;
       justify-content: space-between;
+      padding: 8px;
       .Info {
         width: 96px;
         text-align: center;
@@ -72,8 +73,7 @@
         width: 704px;
         padding: 8px;
         .Exif {
-          // display: flex;
-          // justify-content: space-between;
+          margin: 0 0 8px;
         }
       }
     }
@@ -130,7 +130,7 @@
         }
         .Comment {
           width: 632px;
-          height: 160px;
+          min-height: 160px;
           background-color: white;
           margin: 24px auto;
           display: flex;
@@ -147,10 +147,26 @@
           .NameAndDaytime {
             display: flex;
             justify-content: space-between;
+            .UserName {
+              span {
+                color: gray;
+                font-size: 12px;
+              }
+            }
+            .CreatedAt {
+              color: gray;
+            }
           }
           .CommentAndDelete {
             display: flex;
-            justify-content: space-between;          }
+            justify-content: space-between;
+            margin: 8px 0;
+            .TemplateComment {
+              width: 500px;
+            }
+            .CommentDelete {
+            }
+          }
         }
       }
       .CommentForm {
@@ -198,17 +214,31 @@
           margin-top: 24px;
           .PhotoAndName {
             display: flex;
-            justify-content: space-between;
             .UserPhoto {
-              // height: 72px;
               max-width: 72px;
             }
-            .UserName {
-              width: 256px;
+            .NameAndLikes {
+              margin: 0 0 0 8px;
+              .UserName {
+                span {
+                  color: gray;
+                  font-size: 12px;
+                }
+              }
+              .TotalLikes {
+                span {
+                  color: gray;
+                  font-size: 12px;
+                }
+              }
             }
           }
           .Profile {
-            margin-top: 8px;
+            margin: 8px 0;
+            span {
+              color: gray;
+              font-size: 12px;
+            }
           }
         }
       }

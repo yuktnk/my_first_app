@@ -7,14 +7,14 @@
         = link_to post_path(post.id) do
           .caption
             .captionTitle
-              Title：
+              %span Title：
               = post.title
             .captionBy
-              by：
+              %span by：
               = post.user.name 
-              さん
+              %span さん
             .captionLike
-              いいね数：
+              %span いいね数：
               = post.likes.count
             .captionComment
               = post.comment

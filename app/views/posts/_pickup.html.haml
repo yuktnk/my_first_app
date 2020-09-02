@@ -1,5 +1,5 @@
 .Pickup
-  - @posts.first(1).each do |post|
+  - @posts.shuffle.first(1).each do |post|
     .Pickup__main--bg
       = image_tag post.image.url, class: 'PickupBg'
     .Pickup__main
@@ -8,27 +8,34 @@
           = image_tag post.image.url, size: "480x360"
       .MainData
         .MainData--title
-          Title
+          %span Title :
           = post.title
         .MainData--userName
-          Photo by: 
+          %span Photo by :
           = post.user.name
+        .MainData--Like
+          %span いいね数 :
+          = post.likes.count
         <br>
         .MainData--details
-          Exif:
-          F:
-          = post.F
-          SS:
-          = post.SS
-          ISO:
-          = post.ISO
+          %span Exif:
+          <br>
+          .FSSISO
+            .Exif
+              %span F :
+              = post.F
+            .Exif
+              %span SS :
+              = post.SS
+            .Exif
+              %span ISO :
+              = post.ISO
         <br>
         .MainData--comment
-          Comment: 
+          %span Comment: 
+          <br>
           = post.comment
-        .MainData--Like
-          いいね数：
-          = post.likes.count
+        
   .Pickup__sub
     %h1 - Pickup Photos -
     %ul.Pickup__imageList
