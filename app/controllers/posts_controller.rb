@@ -14,10 +14,10 @@ class PostsController < ApplicationController
   def create
     @post = Post.create(post_params)
     if @post.save
-      redirect_to root_path, notice: '送信されました'
+      redirect_to root_path, notice: '投稿が完了しました'
     else
       @posts = Post.includes(:user)
-      flash.now[:alert] = 'メッセージを入力してください。'
+      flash.now[:alert] = '投稿が失敗しました'
       render :index
     end
   end
@@ -33,7 +33,12 @@ class PostsController < ApplicationController
 
   def destroy
   post = Post.find(params[:id])
-  post.destroy
+  if post.destroy
+    redirect_to root_path
+    flash[:notice] = "商品を削除しました"
+  else
+    redirect_back(fallback_location: root_path)
+    flash[:alert] = "商品の削除に失敗しました"
   end
 
   def show
