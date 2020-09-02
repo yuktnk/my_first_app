@@ -1,6 +1,14 @@
 .Header {
   width: 100vw;
   &__wrap{
+    &--logo {
+      display: flex;
+      .Greeting {
+        color: #2e9dec;
+        font-size: small;
+        margin: auto 24px;
+      }
+    }
     &--menu {
       width: 100%;
       color: white;
