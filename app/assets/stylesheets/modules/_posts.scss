@@ -18,6 +18,7 @@
 }
 
 .Pickup {
+  z-index: -1;
   height: 800px;
   width: 100vw;
   display: flex;
@@ -107,6 +108,7 @@
 }
 
 .Gallery {
+  z-index: -1;
   height: auto;
   width: 100vw;
   background: image-url("p0435_l.jpg");
@@ -122,6 +124,7 @@
     font-family: 'Caveat', cursive;
   }
   &__lists {
+    z-index: -1;
     width: 100%;
     background: image-url("p0435_l.jpg");
     padding: 8px;
@@ -172,12 +175,7 @@
 
 
 
-.fixed {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-}
+
 
 
 

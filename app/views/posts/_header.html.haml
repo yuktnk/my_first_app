@@ -27,17 +27,23 @@
               = link_to new_user_registration_path, class: 'TextDecoNoneWhite' do
                 = icon('fas', 'user-plus')
                 会員登録
+
           - if user_signed_in?
-            %li.UserName
-              = current_user.name
-            %li.HeaderButton
-              = link_to "/users/#{current_user.id}", class: 'TextDecoNoneWhite' do
-                マイギャラリー
-            %li.HeaderButton
-              = link_to edit_user_path(current_user), class: 'TextDecoNoneWhite' do
-                ユーザー情報編集
-            %li.HeaderButton
-              = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'TextDecoNoneWhite'
+            %dl#acMenu
+              %dt
+                %li.UserName.HeaderButton
+                  = current_user.name
+                  %span さん
+              %dd 
+                %li.HeaderButton
+                  = link_to "/users/#{current_user.id}", class: 'TextDecoNoneWhite' do
+                    マイギャラリー
+                %li.HeaderButton
+                  = link_to edit_user_path(current_user), class: 'TextDecoNoneWhite' do
+                    ユーザー情報編集
+                %li.HeaderButton
+                  = link_to  destroy_user_session_path, method: :delete, class: 'TextDecoNoneWhite' do
+                    ログアウト
             %li.HeaderButton
               = link_to new_post_path, class: 'TextDecoNoneWhite' do
                 = icon('fas', 'upload')
