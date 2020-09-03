@@ -29,7 +29,7 @@
     position: absolute;
     top: 0px;
     left: 0px;
-    -ms-filter: blur(24px);
+    // -ms-filter: blur(24px);
     filter: blur(8px);
     .PickupBg {
       height: 480px;
@@ -52,10 +52,11 @@
       box-shadow: 0px 0px 24px black;
     }
     .MainData {
+      color: #fff;
       height: 360px;
       width: 480px;
       padding: 0 16px;
-      text-shadow: 0px 0px 2px white;
+      text-shadow: 0px 0px 4px black;
       .FSSISO {
         display: flex;
         .Exif {
