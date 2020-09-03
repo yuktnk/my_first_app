@@ -3,11 +3,22 @@
   &__wrap{
     &--logo {
       display: flex;
+      #About {
+        color: #2e9dec;
+        border-bottom: #2e9dec solid 1px;
+        margin: auto 8px 12px;
+        cursor: pointer;
+        transition: all .3s;
+      }
+      #About:hover {
+        color: #fd8008;
+        border-bottom: #fd8008 solid 1px;
+      }
       .Greeting {
         color: #2e9dec;
         font-size: small;
         text-align: center;
-        margin: auto 24px;
+        margin: auto 50px;
       }
     }
     &--menu {
@@ -58,6 +69,7 @@
             min-width:152px;
             text-align: center;
             color: white;
+            border-left:#666 1px solid;
             .TextDecoNoneWhite {
               display: block;
               height: 100%;

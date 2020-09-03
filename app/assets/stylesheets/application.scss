@@ -9,15 +9,17 @@
 @import "modules/start";
 @import "modules/header";
 @import "modules/footer";
+@import "modules/about";
 
 a {
   text-decoration: none;
 }
 body {
-  // line-height: 1.57;
-  // letter-spacing: 0.2rem;
-  // font-size: 16px;
-  // color: #666;
-  // font-family: 'Unica One', "Avenir", "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo, "メイリオ", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
-  // margin: 0;
+  letter-spacing: 0.1rem;
+  font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
 } 
