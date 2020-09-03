@@ -19,6 +19,7 @@
         background-color: #2e9dec;
       }
       .Navigation {
+        height: 45px;
         display: flex;
         justify-content: space-between;
         .LeftNav {
@@ -46,12 +47,16 @@
         .RightNav{
           display: flex;
           .UserName {
+            height: 45px;
             padding: 8px;
+            span {
+              font-size: 10px;
+              color: lightgray;
+            }
           }
           .HeaderButton {
+            width:152px;
             text-align: center;
-            text-decoration: none;
-            outline: none;
             color: white;
             .TextDecoNoneWhite {
               display: block;
@@ -84,5 +89,47 @@
         }
       }
     }
+  }
+  //アコーディオンメニューのための記述
+  #acMenu dt{
+    display:block;
+    min-width:152px;
+    // height:50px;
+    // line-height:50px;
+    text-align:center;
+    border-right:#666 1px solid;
+    border-left:#666 1px solid;
+    cursor:pointer;
+    background: image-url("DownArrow.png");
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 124px;
+    background-size: 12px;
+  }
+  #acMenu dt.active{
+    background: image-url("UpArrow.png");
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 124px;
+    background-size: 12px;
+  }
+  #acMenu dd{
+    background-color: #262626;
+    min-width:152px;
+    text-align:center;
+    display:none;
+    position: absolute;
+    z-index: 1000;
+    li {
+      height:45px;
+      border-top:#666 1px solid;
+    }
+  }
+  //スクロールした際にヘッダーを固定する記述
+  .fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
   }
 }
