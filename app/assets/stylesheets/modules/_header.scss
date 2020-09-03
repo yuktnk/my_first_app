@@ -48,7 +48,7 @@
           display: flex;
           .UserName {
             height: 45px;
-            padding: 8px;
+            padding: 8px 32px;
             span {
               font-size: 10px;
               color: lightgray;
@@ -91,6 +91,10 @@
     }
   }
   //アコーディオンメニューのための記述
+  dl {
+    min-width: 152px;
+    
+  }
   #acMenu dt{
     display:block;
     min-width:152px;
@@ -103,14 +107,14 @@
     background: image-url("DownArrow.png");
     background-repeat: no-repeat;
     background-position-y: center;
-    background-position-x: 124px;
+    background-position-x: 12px;
     background-size: 12px;
   }
   #acMenu dt.active{
     background: image-url("UpArrow.png");
     background-repeat: no-repeat;
     background-position-y: center;
-    background-position-x: 124px;
+    background-position-x: 12px;
     background-size: 12px;
   }
   #acMenu dd{
@@ -118,10 +122,11 @@
     min-width:152px;
     text-align:center;
     display:none;
-    position: absolute;
+    position: relative;
     z-index: 1000;
     li {
       height:45px;
+      min-width:152px;
       border-top:#666 1px solid;
     }
   }
