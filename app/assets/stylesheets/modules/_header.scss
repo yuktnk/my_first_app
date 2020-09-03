@@ -1,5 +1,4 @@
 .Header {
-  z-index: 1000;
   width: 100vw;
   &__wrap{
     &--logo {
@@ -119,6 +118,8 @@
     min-width:152px;
     text-align:center;
     display:none;
+    position: absolute;
+    z-index: 1000;
     li {
       height:45px;
       border-top:#666 1px solid;

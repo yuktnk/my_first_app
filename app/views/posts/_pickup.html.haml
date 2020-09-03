@@ -5,7 +5,7 @@
     .Pickup__main
       .MainImage
         = link_to post_path(post.id) do
-          = image_tag post.image.url, size: "480x360"
+          = image_tag post.image.url, height: "440px"
       .MainData
         .MainData--title
           %span Title :
