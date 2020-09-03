@@ -5,3 +5,9 @@ $(function(){
     $('.AboutPage').slideToggle(500);
   })
 })
+
+$(function(){
+  $('#AboutClose').click(function(){
+    $('.AboutPage').slideToggle(500);
+  })
+})

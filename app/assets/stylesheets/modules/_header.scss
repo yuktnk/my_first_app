@@ -4,14 +4,15 @@
     &--logo {
       display: flex;
       #About {
-        font-weight: bold;
+        color: #2e9dec;
+        border-bottom: #2e9dec solid 1px;
         margin: auto 8px 12px;
         cursor: pointer;
         transition: all .3s;
       }
       #About:hover {
-        color: #2e9dec;
-        border-bottom: #2e9dec solid 1px;
+        color: #fd8008;
+        border-bottom: #fd8008 solid 1px;
       }
       .Greeting {
         color: #2e9dec;

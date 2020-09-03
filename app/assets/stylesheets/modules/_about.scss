@@ -13,6 +13,15 @@
   // display: none;
   &--Logo {
     padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    #AboutClose {
+      transition: all .3s;
+      cursor: pointer;
+    }
+    #AboutClose:hover {
+      color: #2e9dec;
+    }
   }
   &--About {
     margin-bottom: 16px;
