@@ -1,0 +1,49 @@
+.Personal {
+  // height: 360px;
+  width: 100vw;
+  // border-top: 2px solid white;
+  // border-bottom: 2px solid white;
+  
+  .BGImage {
+    height: 360px;
+    width: 100%;
+    background: image-url("photo6.jpg") no-repeat center center;
+    background-size: cover;
+    border-top:  2px solid white;
+    border-bottom:  2px solid white;
+    .UserInfo {
+      height: 360px;
+      display: flex;
+      justify-content: space-around;
+      background-color: rgba(255, 255, 255, 0.7);
+      box-shadow: 0px 0px 16px gray inset;
+      padding: 20px 0;
+      &__Image{
+        height: 320px;
+        width: 320px;
+        .pic {
+          height: 320px;
+          width: 320px;
+          object-fit: cover;
+          border: 2px solid white;
+          border-radius: 50%;
+          box-shadow: 0px 0px 16px gray;
+        }
+      }
+      &__Profile {
+        height: 300px;
+        width: 600px;
+        padding: 20px 0;
+        &--name {
+          font-size: 24px;
+          span {
+            font-size: 14px;
+          }
+        }
+        &--profile {
+        }
+      }
+    }
+  }
+
+}

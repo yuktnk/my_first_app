@@ -1,3 +1,19 @@
+.Personal
+  .BGImage
+    -# = image_tag @user.image.url
+    .UserInfo
+      .UserInfo__Image
+        = image_tag @user.image.url, class:'pic'
+      .UserInfo__Profile
+        .UserInfo__Profile--name
+          = @user.name
+          %span さん
+        .UserInfo__Profile--Profile
+          = @user.profile
+
+
+
+
 .Gallery
   .Gallery__title - Gallery -
   %ul.Gallery__lists
