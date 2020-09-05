@@ -26,7 +26,7 @@
         box-shadow: 0px 0px 16px gray;
         text-align: center;
         p {
-          color: black;
+          border-radius: 50%;
           line-height: 320px;
         }
         .pic {
@@ -53,5 +53,11 @@
       }
     }
   }
-
+  .TextDecoNoneBlack {
+    color: #2e9dec;
+    transition: all .3s;
+  }
+  .TextDecoNoneBlack:hover {
+    color: #fd8008;
+  }
 }
