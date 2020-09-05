@@ -20,9 +20,6 @@ $(function(){
                       <div class="TemplateComment">
                         ${comment.text}
                       </div>
-                      <div class="CommentDelete">
-                        <a class="LinkOrange" rel="nofollow" data-method="delete" href="/posts/:post_id/comments/81">削除</a>
-                      </div>
                   </div>
                 </li>`
     return html;
