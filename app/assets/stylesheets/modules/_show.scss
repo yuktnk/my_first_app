@@ -27,9 +27,28 @@
       }
       .photoBy {
         margin: 8px;
-        // background-color: white;
+        display: flex;
+        align-items: baseline;
         .PersonMini {
+          height: 36px;
           width: 36px;
+          object-fit: cover;
+          margin: 0 4px;
+        }
+        span {
+          color: gray;
+          font-size: 12px;
+        }
+        p {
+          height: 36px;
+          width: 36px;
+          line-height: 18px;
+          font-size: 4px;
+          text-align: center;
+          margin: 0 4px;
+          color: gray;
+          border: lightgray solid 1px;
+          
         }
       }
     }
@@ -72,8 +91,19 @@
       .Detail {
         width: 704px;
         padding: 8px;
+        p {
+          color: gray;
+          font-size: 12px;
+          margin-bottom: 4px;
+        }
+        span {
+          color: gray;
+          font-size: 12px;
+        }
         .Exif {
-          margin: 0 0 8px;
+          margin: 0 0 16px;
+        }
+        .Comment {
         }
       }
     }
@@ -138,8 +168,21 @@
           padding: 8px;
           overflow: scroll;
           .UserPhoto {
-            // height: 72px;
+            height: 72px;
             width: 72px;
+            .Person {
+              height: 72px;
+              width: 72px;
+              object-fit: cover;
+            }
+            p {
+              line-height: 72px;
+              font-size: x-small;
+              text-align: center;
+              color: gray;
+              border: lightgray solid 1px;
+              
+            }
           }
         }
         .CommentZone {
@@ -215,7 +258,21 @@
           .PhotoAndName {
             display: flex;
             .UserPhoto {
-              max-width: 72px;
+              height: 72px;
+              width: 72px;
+              .Person {
+                height: 72px;
+                width: 72px;
+                object-fit: cover;
+              }
+              p {
+                line-height: 72px;
+                font-size: x-small;
+                text-align: center;
+                color: gray;
+                border: lightgray solid 1px;
+                
+              }
             }
             .NameAndLikes {
               margin: 0 0 0 8px;

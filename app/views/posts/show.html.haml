@@ -4,12 +4,14 @@
       .photoTitle 
         = @post.title
       .photoBy
-        Photo：
+        %span Photo：
         - if @post.user.image.url
           = image_tag @post.user.image.url, class: 'PersonMini'
+        - else
+          %p 
         = link_to "/users/#{@post.user.id}", class: 'LinkOrange' do
           = @post.user.name 
-        さん
+        %span さん
     .ImageArea
       = image_tag @post.image.url, class: "Photo"
       .LikeAndEdit
@@ -26,14 +28,16 @@
         撮影情報
       .Detail
         .Exif
-          絞り値：
+          %p Exif：
+          %span 絞り値：
           = @post.F 
-          シャッター速度：
+          %span シャッター速度：
           = @post.SS
-          ISO感度：
+          %span ISO感度：
           = @post.ISO
         .Comment
-        = @post.comment
+          %p Comment：
+          = @post.comment
 
 
 
@@ -50,7 +54,9 @@
               .Comment
                 .UserPhoto
                   - if comment.user.image.url
-                    = image_tag comment.user.image.url, class: 'person'
+                    = image_tag comment.user.image.url, class: 'Person'
+                  - else
+                    %p No Image
                 .CommentZone
                   .NameAndDaytime
                     .UserName
@@ -84,7 +90,9 @@
           .PhotoAndName
             .UserPhoto
               - if @post.user.image.url
-                = image_tag @post.user.image.url, class: 'person'
+                = image_tag @post.user.image.url, class: 'Person'
+              - else
+                %p No Image
             .NameAndLikes
               .UserName
                 = link_to "/users/#{@post.user.id}", class: 'LinkOrange' do
