@@ -7,7 +7,7 @@
           = image_tag @user.image.url, class:'pic'
         - else
           - if user_signed_in? && current_user.id
-            = link_to edit_user_path(current_user), class: 'TextDecoNoneBlack' do
+            = link_to edit_user_path(current_user), class: 'LinkBlue' do
               %p 写真を設定してください
           - else
             %p 写真未設定
@@ -20,7 +20,7 @@
             = @user.profile
           - else
             - if user_signed_in? && current_user.id
-              = link_to edit_user_path(current_user), class: 'TextDecoNoneBlack' do
+              = link_to edit_user_path(current_user), class: 'LinkBlue' do
                 %p プロフィールを設定してください
             - else
               プロフィール未設定

@@ -9,7 +9,7 @@
           = image_tag @post.user.image.url, class: 'PersonMini'
         - else
           %p 
-        = link_to "/users/#{@post.user.id}", class: 'LinkOrange' do
+        = link_to "/users/#{@post.user.id}", class: 'LinkBlue' do
           = @post.user.name 
         %span さん
     .ImageArea
@@ -60,7 +60,7 @@
                 .CommentZone
                   .NameAndDaytime
                     .UserName
-                      = link_to "/users/#{comment.user.id}", class: 'LinkOrange' do
+                      = link_to "/users/#{comment.user.id}", class: 'LinkBlue' do
                         = comment.user.name
                       %span さん
                     .CreatedAt
@@ -70,7 +70,7 @@
                       = comment.text
                     .CommentDelete
                       - if user_signed_in? && current_user.id == comment.user.id
-                        = link_to "/posts/:post_id/comments/#{comment.id}", method: :delete, class: 'LinkOrange' do
+                        = link_to "/posts/:post_id/comments/#{comment.id}", method: :delete, class: 'LinkBlue' do
                           削除
           - else
             %strong まだコメントはありません。
@@ -95,7 +95,7 @@
                 %p No Image
             .NameAndLikes
               .UserName
-                = link_to "/users/#{@post.user.id}", class: 'LinkOrange' do
+                = link_to "/users/#{@post.user.id}", class: 'LinkBlue' do
                   = @post.user.name
                 %span さん
               .TotalLikes

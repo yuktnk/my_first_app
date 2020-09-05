@@ -8,7 +8,7 @@ $(function(){
                   <div class="CommentZone">
                     <div class="NameAndDaytime">
                       <div class="UserName">
-                        <a class="LinkOrange" href="/users/${comment.user_id}">
+                        <a class="LinkBlue" href="/users/${comment.user_id}">
                           ${comment.user_name}
                         </a>
                       </div>

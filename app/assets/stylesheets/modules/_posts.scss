@@ -6,16 +6,15 @@
 }
 
 
-.LinkOrange {
+
+.LinkBlue {
+  color: #2e9dec;
+  transition: all .3s;
+}
+.LinkBlue:hover {
   color: #fd8008;
 }
 
-.LinkBlue {
-  color: white;
-  background-color: #2e9dec;
-  padding: 16px;
-  border-radius: 5px;
-}
 
 .Pickup {
   height: 800px;
