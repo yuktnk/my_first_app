@@ -104,6 +104,9 @@
           .Profile
             %span プロフィール：
             <br>
-            = @post.user.profile
+            - if @post.user.profile
+              = @post.user.profile
+            - else
+              （プロフィール未設定）
           .ToGallery
             
