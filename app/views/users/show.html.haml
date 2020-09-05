@@ -3,14 +3,27 @@
     -# = image_tag @user.image.url
     .UserInfo
       .UserInfo__Image
-        = image_tag @user.image.url, class:'pic'
+        - if @user.image.url
+          = image_tag @user.image.url, class:'pic'
+        - else
+          - if user_signed_in? && current_user.id
+            = link_to edit_user_path(current_user), class: 'LinkBlue' do
+              %p 写真を設定してください
+          - else
+            %p 写真未設定
       .UserInfo__Profile
         .UserInfo__Profile--name
           = @user.name
           %span さん
         .UserInfo__Profile--Profile
-          = @user.profile
-
+          - if @user.profile
+            = @user.profile
+          - else
+            - if user_signed_in? && current_user.id
+              = link_to edit_user_path(current_user), class: 'LinkBlue' do
+                %p プロフィールを設定してください
+            - else
+              プロフィール未設定
 
 
 

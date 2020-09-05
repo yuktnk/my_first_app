@@ -6,16 +6,15 @@
 }
 
 
-.LinkOrange {
+
+.LinkBlue {
+  color: #2e9dec;
+  transition: all .3s;
+}
+.LinkBlue:hover {
   color: #fd8008;
 }
 
-.LinkBlue {
-  color: white;
-  background-color: #2e9dec;
-  padding: 16px;
-  border-radius: 5px;
-}
 
 .Pickup {
   height: 800px;
@@ -103,6 +102,11 @@
         width: 200px;
         background-size: cover;
         background-color: white;
+        .SubImages {
+          height: 160px;
+          width: 200px;
+          object-fit: cover;
+        }
       }
     }
   }
@@ -157,6 +161,10 @@
         }
         .captionComment {
           margin: 8px 0;
+        }
+        p {
+          font-size: 10px;
+          color: lightgray;
         }
         span {
           font-size: 10px;

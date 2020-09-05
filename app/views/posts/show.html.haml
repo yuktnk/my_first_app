@@ -4,12 +4,14 @@
       .photoTitle 
         = @post.title
       .photoBy
-        Photo：
+        %span Photo：
         - if @post.user.image.url
           = image_tag @post.user.image.url, class: 'PersonMini'
-        = link_to "/users/#{@post.user.id}", class: 'LinkOrange' do
+        - else
+          %p 
+        = link_to "/users/#{@post.user.id}", class: 'LinkBlue' do
           = @post.user.name 
-        さん
+        %span さん
     .ImageArea
       = image_tag @post.image.url, class: "Photo"
       .LikeAndEdit
@@ -26,14 +28,16 @@
         撮影情報
       .Detail
         .Exif
-          絞り値：
+          %p Exif：
+          %span 絞り値：
           = @post.F 
-          シャッター速度：
+          %span シャッター速度：
           = @post.SS
-          ISO感度：
+          %span ISO感度：
           = @post.ISO
         .Comment
-        = @post.comment
+          %p Comment：
+          = @post.comment
 
 
 
@@ -50,11 +54,13 @@
               .Comment
                 .UserPhoto
                   - if comment.user.image.url
-                    = image_tag comment.user.image.url, class: 'person'
+                    = image_tag comment.user.image.url, class: 'Person'
+                  - else
+                    %p No Image
                 .CommentZone
                   .NameAndDaytime
                     .UserName
-                      = link_to "/users/#{comment.user.id}", class: 'LinkOrange' do
+                      = link_to "/users/#{comment.user.id}", class: 'LinkBlue' do
                         = comment.user.name
                       %span さん
                     .CreatedAt
@@ -64,7 +70,7 @@
                       = comment.text
                     .CommentDelete
                       - if user_signed_in? && current_user.id == comment.user.id
-                        = link_to "/posts/:post_id/comments/#{comment.id}", method: :delete, class: 'LinkOrange' do
+                        = link_to "/posts/:post_id/comments/#{comment.id}", method: :delete, class: 'LinkBlue' do
                           削除
           - else
             %strong まだコメントはありません。
@@ -84,10 +90,12 @@
           .PhotoAndName
             .UserPhoto
               - if @post.user.image.url
-                = image_tag @post.user.image.url, class: 'person'
+                = image_tag @post.user.image.url, class: 'Person'
+              - else
+                %p No Image
             .NameAndLikes
               .UserName
-                = link_to "/users/#{@post.user.id}", class: 'LinkOrange' do
+                = link_to "/users/#{@post.user.id}", class: 'LinkBlue' do
                   = @post.user.name
                 %span さん
               .TotalLikes
@@ -96,6 +104,9 @@
           .Profile
             %span プロフィール：
             <br>
-            = @post.user.profile
+            - if @post.user.profile
+              = @post.user.profile
+            - else
+              （プロフィール未設定）
           .ToGallery
             

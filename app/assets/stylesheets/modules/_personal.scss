@@ -21,6 +21,14 @@
       &__Image{
         height: 320px;
         width: 320px;
+        border: 2px solid white;
+        border-radius: 50%;
+        box-shadow: 0px 0px 16px gray;
+        text-align: center;
+        p {
+          border-radius: 50%;
+          line-height: 320px;
+        }
         .pic {
           height: 320px;
           width: 320px;
@@ -45,5 +53,4 @@
       }
     }
   }
-
 }

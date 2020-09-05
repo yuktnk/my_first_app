@@ -8,7 +8,7 @@ $(function(){
                   <div class="CommentZone">
                     <div class="NameAndDaytime">
                       <div class="UserName">
-                        <a class="LinkOrange" href="/users/${comment.user_id}">
+                        <a class="LinkBlue" href="/users/${comment.user_id}">
                           ${comment.user_name}
                         </a>
                       </div>
@@ -19,9 +19,6 @@ $(function(){
                     <div class="NameAndDaytime">
                       <div class="TemplateComment">
                         ${comment.text}
-                      </div>
-                      <div class="CommentDelete">
-                        <a class="LinkOrange" rel="nofollow" data-method="delete" href="/posts/:post_id/comments/81">削除</a>
                       </div>
                   </div>
                 </li>`

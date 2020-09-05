@@ -51,7 +51,13 @@ class PostsController < ApplicationController
 
   def update
     post = Post.find(params[:id])
-    post.update(post_params)
+    if post.update(post_params)
+      redirect_to root_path
+      flash[:notice] = "編集が完了しました"
+    else
+      redirect_back(fallback_location: root_path)
+      flash[:alert] = "商品の編集に失敗しました"
+    end
   end
 
   private

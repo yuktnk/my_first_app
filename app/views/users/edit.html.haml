@@ -11,12 +11,12 @@
           = f.label :name
         .FormField__input--normal
           = f.text_field :name, autofocus: true
-      
-      .FormField
-        .FormField__label--normal
-          = f.label :email
-        .FormField__input--normal
-          = f.email_field :email
+      //現状メールアドレス変更されると困るのでいったんコメントアウト
+      -# .FormField
+      -#   .FormField__label--normal
+      -#     = f.label :email
+      -#   .FormField__input--normal
+      -#     = f.email_field :email
       
       - if current_user.image.url
         = image_tag current_user.image.url, class: 'person'
@@ -26,7 +26,7 @@
       
       .FormField
         .FormField__label--normal
-          = f.label :"自己紹介"
+          = f.label :"Profile"
         .FormField__input--normal
           = f.text_area :profile, class: 'InputContent InputComment', required: true
       = f.submit "Update", class: 'Button UserButton'
