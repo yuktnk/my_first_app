@@ -17,7 +17,7 @@
         %ul.LeftNav
           %li
             = form_with url: search_posts_path, local: true, method: :get do |form| 
-              = form.text_field :keyword, placeholder: "タイトル名で検索", class: "SearchInput"
+              = form.text_field :keyword, placeholder: "タイトル、もしくはコメントから", class: "SearchInput"
               = form.label :submit do
                 = form.submit "検索", class: "SearchButton"
         %ul.RightNav
