@@ -23,6 +23,9 @@
         %ul.RightNav
           - unless user_signed_in?
             %li.HeaderButton
+              = link_to users_guest_sign_in_path, method: :post ,class: 'TextDecoNoneWhite' do
+                ゲストログイン（閲覧用）
+            %li.HeaderButton
               = link_to new_user_session_path, class: 'TextDecoNoneWhite' do
                 = icon('fas', 'sign-in-alt')
                 ログイン
