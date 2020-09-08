@@ -12,11 +12,11 @@
         .FormField__input--normal
           = f.text_field :name, autofocus: true
       //現状メールアドレス変更されると困るのでいったんコメントアウト
-      -# .FormField
-      -#   .FormField__label--normal
-      -#     = f.label :email
-      -#   .FormField__input--normal
-      -#     = f.email_field :email
+      .FormField
+        .FormField__label--normal
+          = f.label :email
+        .FormField__input--normal
+          = f.email_field :email
       
       - if current_user.image.url
         = image_tag current_user.image.url, class: 'person'

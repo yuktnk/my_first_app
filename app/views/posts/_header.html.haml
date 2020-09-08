@@ -8,9 +8,6 @@
         What's「カメコミュ」
       .Greeting 
         %p - - -  閲覧ありがとうございます。日々開発・修正中です。  - - -
-        %p  [ テストアカウント ]
-        %p Eメール：testuser@example.com
-        %p パスワード：testuser 
     %nav.Header__wrap--menu
       .BlueLine
       .Navigation
@@ -22,6 +19,9 @@
                 = form.submit "検索", class: "SearchButton"
         %ul.RightNav
           - unless user_signed_in?
+            %li.HeaderButton
+              = link_to users_guest_sign_in_path, method: :post ,class: 'TextDecoNoneWhite' do
+                ゲストログイン（閲覧用）
             %li.HeaderButton
               = link_to new_user_session_path, class: 'TextDecoNoneWhite' do
                 = icon('fas', 'sign-in-alt')
