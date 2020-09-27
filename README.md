@@ -14,13 +14,13 @@
 
 ## 使用技術(開発環境)
 
-Haml/Scss
-Ruby/Ruby on Rails
-jQuery
-MySQL
-GitHub
-AWS(EC2,S3)
-Visual Studio Code
+Haml/Scss  
+Ruby/Ruby on Rails  
+jQuery  
+MySQL  
+GitHub  
+AWS(EC2,S3)  
+Visual Studio Code  
 「学習してきた機能をなるべく網羅的に盛り込みつつ、＋αで自分自身が興味がある機能を調べながら実装する」という意識で制作しています。
 
 ## 動作確認方法
