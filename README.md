@@ -1,4 +1,4 @@
-<img width="1499" alt="スクリーンショット 2020-09-05 23 05 19" src="https://user-images.githubusercontent.com/67771199/94377264-0146c900-015b-11eb-87b7-833845400353.png">
+![トップページ確認用](https://user-images.githubusercontent.com/67771199/94377329-95b12b80-015b-11eb-8d61-759ec46c8853.jpg)
 
 ## アプリケーション名
 
@@ -70,6 +70,8 @@ Chromeの最新版を利用してアクセスしてください。（デプロ�
 
 
 ### 2,投稿するだけで綺麗なレイアウトで自分のフォトギャラリーを作成できる
+![ユーザー画面確認用](https://user-images.githubusercontent.com/67771199/94377337-a792ce80-015b-11eb-8ae8-c0f48d2233c3.jpg)
+
 　「綺麗に撮れた写真たちを見て欲しい！」という気持ちは誰しもあると思います。  
  そんな私自身の欲求を満たすためにも(笑)、投稿するだけで綺麗なレイアウトでユーザーごとにフォトギャラリーができあがるようにしました。  
  また、撮るテーマは人物、風景、動物、花など人それぞれ個性があるので、他のユーザーのフォトギャラリーを見るのも楽しみのひとつになると考えています。
@@ -127,13 +129,23 @@ Chromeの最新版を利用してアクセスしてください。（デプロ�
 
 
 
-<!-- ## tagsテーブル
+<!--
+## tagsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |text|text|null: false|
 ### Association
 - belongs_to :photo
-- has_many :posts, through: :posts_tags -->
+- has_many :posts, through: :posts_tags
+## posts_tagsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|post_id|integer|null: false, foreign_key: true|
+|tag_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :post
+- belongs_to :tag
+-->
 
 
 ## commentsテーブル
@@ -145,11 +157,4 @@ belongs_to :user
 belongs_to :post
 
 
-## posts_tagsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|post_id|integer|null: false, foreign_key: true|
-|tag_id|integer|null: false, foreign_key: true|
-### Association
-- belongs_to :post
-- belongs_to :tag
+
